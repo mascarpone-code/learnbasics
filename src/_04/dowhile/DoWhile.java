@@ -1,4 +1,4 @@
-package _04;
+package _04.dowhile;
 
 public class DoWhile {
     public static void main(String[] args) {

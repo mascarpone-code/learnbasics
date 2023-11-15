@@ -1,4 +1,4 @@
-package _03;
+package _03.maxmin;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package _04;
+package _04.average;
 
 public class Average {
     public static void main(String[] args) {

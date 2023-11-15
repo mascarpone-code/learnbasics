@@ -1,4 +1,4 @@
-package _04;
+package _04.rowsum;
 
 import java.util.Scanner;
 

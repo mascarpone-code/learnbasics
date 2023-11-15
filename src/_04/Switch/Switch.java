@@ -1,4 +1,4 @@
-package _04;
+package _04.Switch;
 
 import java.util.Scanner;
 

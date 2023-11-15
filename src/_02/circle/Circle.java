@@ -1,4 +1,4 @@
-package _02;
+package _02.circle;
 
 public class Circle {
     public static void main(String[] args) {

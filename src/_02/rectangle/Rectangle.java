@@ -1,4 +1,4 @@
-package _02;
+package _02.rectangle;
 
 import java.util.Scanner;
 

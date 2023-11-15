@@ -1,4 +1,4 @@
-package _04;
+package _04.tennumbersinrow;
 
 public class TenNumbersInRow {
     public static void main(String[] args) {

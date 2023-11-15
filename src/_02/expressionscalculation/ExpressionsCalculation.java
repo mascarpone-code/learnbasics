@@ -1,4 +1,4 @@
-package _02;
+package _02.expressionscalculation;
 
 public class ExpressionsCalculation {
     public static void main(String[] args) {
