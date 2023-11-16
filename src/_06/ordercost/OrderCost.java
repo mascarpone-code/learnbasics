@@ -27,16 +27,16 @@ public class OrderCost {
 
         final int orderCostForDiscount = 1000;
         final int itemsCountForDiscount = 10;
-        final double discount1 = 0.95;
-        final double discount2 = 0.9;
+        final double itemsCountOrOrderCostDiscount = 0.95;
+        final double itemsCountAndOrderCostDiscount = 0.9;
 
-        boolean isDiscountForItemsCount = itemsCount >= itemsCountForDiscount;
-        boolean isDiscountForOrderCost = orderCost >= orderCostForDiscount;
+        boolean isItemsCountDiscount = itemsCount >= itemsCountForDiscount;
+        boolean isOrderCostDiscount = orderCost >= orderCostForDiscount;
 
-        if (isDiscountForItemsCount && isDiscountForOrderCost) {
-            orderCost *= discount2;
-        } else if (isDiscountForItemsCount || isDiscountForOrderCost) {
-            orderCost *= discount1;
+        if (isItemsCountDiscount && isOrderCostDiscount) {
+            orderCost *= itemsCountAndOrderCostDiscount;
+        } else if (isItemsCountDiscount || isOrderCostDiscount) {
+            orderCost *= itemsCountOrOrderCostDiscount;
         }
 
         return orderCost;

@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class TemperatureConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите температуру в градусах Цельсия: ");
 
+        System.out.print("Введите температуру в градусах Цельсия: ");
         double celsius = scanner.nextDouble();
 
         System.out.println("В градусах Кельвина это: " + getKelvin(celsius));

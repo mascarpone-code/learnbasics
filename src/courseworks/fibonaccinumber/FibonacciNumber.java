@@ -7,16 +7,16 @@ public class FibonacciNumber {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите индекс числа Фибоначчи: ");
-        int indexOfRequiredFibonacciNumber = scanner.nextInt();
+        int requiredFibonacciNumberIndex = scanner.nextInt();
 
-        int number2 = 1;
         int requiredFibonacciNumber = 0;
+        int nextFibonacciNumber = 1;
         int i = 1;
 
-        while (i <= indexOfRequiredFibonacciNumber) {
-            int number1 = number2;
-            number2 = requiredFibonacciNumber;
-            requiredFibonacciNumber = number1 + number2;
+        while (i <= requiredFibonacciNumberIndex) {
+            int currentFibonacciNumber = nextFibonacciNumber;
+            nextFibonacciNumber = requiredFibonacciNumber;
+            requiredFibonacciNumber = currentFibonacciNumber + nextFibonacciNumber;
 
             ++i;
         }

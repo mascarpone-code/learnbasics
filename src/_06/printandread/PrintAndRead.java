@@ -14,9 +14,9 @@ public class PrintAndRead {
         System.out.println(userNumber);
     }
 
-    private static int printAndRead(String inputInvite) {
+    private static int printAndRead(String inputInvitation) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print(inputInvite);
+        System.out.print(inputInvitation);
 
         return scanner.nextInt();
     }

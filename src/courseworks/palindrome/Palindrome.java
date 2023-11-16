@@ -9,6 +9,12 @@ public class Palindrome {
         System.out.print("Введите строку для проверки: ");
         String palindromeCandidate = scanner.nextLine();
 
+        System.out.println(isPalindrome(palindromeCandidate)
+                ? "Эта строка является палиндромом."
+                : "Эта строка не является палиндромом.");
+    }
+
+    private static boolean isPalindrome(String palindromeCandidate) {
         int length = palindromeCandidate.length();
         boolean isPalindrome = true;
 
@@ -16,20 +22,21 @@ public class Palindrome {
         int j = length - 1;
 
         while (i < length / 2) {
-            char c0 = palindromeCandidate.charAt(i);
-            char c1 = palindromeCandidate.charAt(j);
+            char currentLeftChar = palindromeCandidate.charAt(i);
 
-            if (Character.isWhitespace(c0)) {
+            if (!Character.isLetter(currentLeftChar)) {
                 i++;
                 continue;
             }
 
-            if (Character.isWhitespace(c1)) {
+            char currentRightChar = palindromeCandidate.charAt(j);
+
+            if (!Character.isLetter(currentRightChar)) {
                 j--;
                 continue;
             }
 
-            if (Character.toLowerCase(c0) != Character.toLowerCase(c1)) {
+            if (Character.toLowerCase(currentLeftChar) != Character.toLowerCase(currentRightChar)) {
                 isPalindrome = false;
                 break;
             }
@@ -38,8 +45,6 @@ public class Palindrome {
             j--;
         }
 
-        System.out.println(isPalindrome
-                ? "Эта строка является палиндромом."
-                : "Эта строка не является палиндромом.");
+        return isPalindrome;
     }
 }

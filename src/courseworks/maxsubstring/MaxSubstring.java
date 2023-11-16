@@ -9,29 +9,29 @@ public class MaxSubstring {
         System.out.print("Введите строку: ");
         String line = scanner.nextLine();
 
-        System.out.println("Длина максимальной подстроки: " + getMaxSubstring(line));
+        System.out.println("Длина максимальной подстроки: " + getMaxSubstringLength(line));
     }
 
-    public static int getMaxSubstring(String line) {
+    public static int getMaxSubstringLength(String line) {
         if (line.isEmpty()) {
             return 0;
         }
 
         int maxSubstringLength = 1;
-        int tempSubstringLength = 1;
+        int currentSubstringLength = 1;
         char previousChar = line.charAt(0);
 
         for (int i = 1; i < line.length(); i++) {
             char currentChar = line.charAt(i);
 
             if (currentChar == previousChar) {
-                tempSubstringLength++;
+                currentSubstringLength++;
 
-                if (tempSubstringLength > maxSubstringLength) {
-                    maxSubstringLength = tempSubstringLength;
+                if (currentSubstringLength > maxSubstringLength) {
+                    maxSubstringLength = currentSubstringLength;
                 }
             } else {
-                tempSubstringLength = 1;
+                currentSubstringLength = 1;
                 previousChar = currentChar;
             }
         }
